@@ -449,8 +449,7 @@ ScriptLoadHandler::OnStreamComplete(nsIIncrementalStreamLoader* aLoader,
 
   // Everything went well, keep the CacheInfoChannel alive such that we can
   // later save the bytecode on the cache entry.
-  if (NS_SUCCEEDED(rv) && mRequest->IsSource() &&
-      StaticPrefs::dom_script_loader_bytecode_cache_enabled()) {
+  if (NS_SUCCEEDED(rv) && mRequest->IsSource() && false) {
     mRequest->mCacheInfo = do_QueryInterface(channelRequest);
     LOG(("ScriptLoadRequest (%p): nsICacheInfoChannel = %p", mRequest.get(),
          mRequest->mCacheInfo.get()));

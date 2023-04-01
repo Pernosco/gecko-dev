@@ -913,8 +913,9 @@ static void LoadStartupJSPrefs(XPCJSContext* xpccx) {
         XRE_IsContentProcess()
             ? StaticPrefs::javascript_options_jithints_DoNotUseDirectly()
             : false);
-    sSelfHostedUseSharedMemory = StaticPrefs::
-        javascript_options_self_hosted_use_shared_memory_DoNotUseDirectly();
+    //sSelfHostedUseSharedMemory = StaticPrefs::
+    //javascript_options_self_hosted_use_shared_memory_DoNotUseDirectly();
+    sSelfHostedUseSharedMemory = false;
   }
 
   JS_SetOffthreadIonCompilationEnabled(

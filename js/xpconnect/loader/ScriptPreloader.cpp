@@ -828,6 +828,8 @@ void ScriptPreloader::CacheWriteComplete() {
 void ScriptPreloader::NoteStencil(const nsCString& url,
                                   const nsCString& cachePath,
                                   JS::Stencil* stencil, bool isRunOnce) {
+  return;
+
   if (!Active()) {
     if (isRunOnce) {
       if (auto script = mScripts.Get(cachePath)) {
@@ -871,6 +873,8 @@ void ScriptPreloader::NoteStencil(const nsCString& url,
                                   ProcessType processType,
                                   nsTArray<uint8_t>&& xdrData,
                                   TimeStamp loadTime) {
+  return;
+
   // After data has been prepared, there's no point in noting further scripts,
   // since the cache either has already been written, or is about to be
   // written. Any time prior to the data being prepared, we can safely mutate

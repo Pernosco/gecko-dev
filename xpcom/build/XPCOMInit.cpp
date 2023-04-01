@@ -254,6 +254,8 @@ NS_InitXPCOM(nsIServiceManager** aResult, nsIFile* aBinDirectory,
 
   sInitialized = true;
 
+  JS::DisableJitBackend();
+
   NS_LogInit();
 
   NS_InitAtomTable();

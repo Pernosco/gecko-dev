@@ -639,7 +639,7 @@ nsresult ScriptLoader::StartLoadInternal(
   // constant.
   aRequest->mCacheInfo = nullptr;
   nsCOMPtr<nsICacheInfoChannel> cic(do_QueryInterface(channel));
-  if (cic && StaticPrefs::dom_script_loader_bytecode_cache_enabled()) {
+  if (cic && false) {
     MOZ_ASSERT(!IsWebExtensionRequest(aRequest),
                "Can not bytecode cache WebExt code");
     if (!aRequest->mFetchSourceOnly) {

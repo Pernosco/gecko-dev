@@ -1487,6 +1487,7 @@ XDRResult XDRStencilDecoder::codeStencil(
   auto resetOptions = mozilla::MakeScopeExit([&] { options_ = nullptr; });
   options_ = &options;
 
+  MOZ_CRASH("Uh oh! Still using XDR");
   MOZ_TRY(VersionCheck(this));
 
   uint32_t length;

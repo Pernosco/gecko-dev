@@ -56,6 +56,8 @@ nsresult ReadCachedStencil(StartupCache* cache, nsACString& cachePath,
 
 nsresult WriteCachedStencil(StartupCache* cache, nsACString& cachePath,
                             JSContext* cx, JS::Stencil* stencil) {
+  return NS_OK;
+
   JS::TranscodeBuffer buffer;
   JS::TranscodeResult code = JS::EncodeStencil(cx, stencil, buffer);
   if (code != JS::TranscodeResult::Ok) {

@@ -176,7 +176,7 @@ void nsXULPrototypeCache::Flush() {
 }
 
 bool nsXULPrototypeCache::IsEnabled() {
-  return !StaticPrefs::nglayout_debug_disable_xul_cache();
+  return false;
 }
 
 void nsXULPrototypeCache::AbortCaching() {
